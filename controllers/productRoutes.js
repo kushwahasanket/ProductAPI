@@ -16,7 +16,8 @@ exports.create = (req,res)=>{
         }
         else
         {
-            res.json(data);
+            
+            res.status(200).json(data);
         }
     })
 }
@@ -28,12 +29,15 @@ exports.readSingle = (req,res)=>{
    Product.findById(id).populate('category').exec((err, data)=>{
        if(err)
        {
-           res.json({
+           res.status(400).json({
                msg: err
            })
        }
        else{
-                res.json(data)
+        
+        res.status(200).json({
+            data : data
+        });
        }
       
    })
@@ -51,7 +55,7 @@ exports.readAll = (req,res)=>{
         }
         else
         {
-            res.json(data)
+            res.status(200).json(data);
         }
     })
  
@@ -70,7 +74,7 @@ exports.readAll = (req,res)=>{
     }
     else
     {
-        res.json(data)
+        res.status(200).json(data);
     }
    })
 }
@@ -81,11 +85,18 @@ exports.readAll = (req,res)=>{
 //id can be send by the user in routes
 exports.remove = (req,res)=>{
     var id = req.params.id
-    Product.findByIdAndRemove(id,(err)=>{
+    Product.findByIdAndRemove(id,(err,data)=>{
         if(err){
             res.status(400).json({
                 message : "!!cannot delete that item!!"
             })
         }
+        else
+        {
+            res.status(200).json({
+                message : "deleted succefully"
+            });
+        }
+        
     })
 }

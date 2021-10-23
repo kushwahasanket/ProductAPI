@@ -1,8 +1,35 @@
 {
   "dependencies": {
     "body-parser": "^1.19.0",
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mongoose": "^6.0.12"
-  }
+    "mocha": "^9.1.3",
+    "mockgoose": "^8.0.4",
+    "mongoose": "^6.0.12",
+    "superset": "^2.0.1",
+    "supertest": "^6.1.6"
+  },
+  "name": "productapi",
+  "description": "This is project is created to Demonstrate the CRUP operation on Product",
+  "version": "1.0.0",
+  "main": "app.js",
+  "directories": {
+    "test": "mocha"
+  },
+  "scripts": {
+    "test": "mocha --recursive --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kushwahasanket/ProductAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kushwahasanket/ProductAPI/issues"
+  },
+  "homepage": "https://github.com/kushwahasanket/ProductAPI#readme"
 }

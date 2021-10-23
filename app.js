@@ -25,6 +25,7 @@ const category = require("./routes/categoryRoutes")
 app.use('/api/product', product)
 app.use('/api/category',category)
 
-app.listen(port,()=>{
+module.exports = app.listen(port,()=>{
     console.log("!server up and running!")
 })
+
