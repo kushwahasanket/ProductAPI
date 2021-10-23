@@ -31,7 +31,7 @@ describe('All product',()=>{
 describe('get single product',()=>{
     describe('GET  PRODUCT BY ID',()=>{
         it('it should get  the product',(done)=>{
-            let id ="6172b7fffd460319e4dcb256"
+            let id ="61738949d0ff103b0c5fdc56"
             chai.request(server)
             .get('/api/product/read/'+id)
             .end((err,res)=>{

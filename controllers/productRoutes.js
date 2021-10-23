@@ -29,15 +29,13 @@ exports.readSingle = (req,res)=>{
    Product.findById(id).populate('category').exec((err, data)=>{
        if(err)
        {
-           res.status(400).json({
+          return res.status(400).json({
                msg: err
            })
        }
        else{
         
-        res.status(200).json({
-            data : data
-        });
+        res.json(data)
        }
       
    })
@@ -68,7 +66,7 @@ exports.readAll = (req,res)=>{
    Product.findOneAndUpdate(id,req.body,(err,data)=>{
     if(err)
     {
-        res.status(400).json({
+        return res.status(400).json({
             message: "!! Error in Updating data base !! :( !!) "
         })
     }
@@ -87,7 +85,7 @@ exports.remove = (req,res)=>{
     var id = req.params.id
     Product.findByIdAndRemove(id,(err,data)=>{
         if(err){
-            res.status(400).json({
+           return res.status(400).json({
                 message : "!!cannot delete that item!!"
             })
         }
