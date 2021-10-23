@@ -1,6 +1,6 @@
 # Project Video Discription
 
-Click here :- https://youtu.be/3qW3cziPDQs
+[Click here](https://youtu.be/3qW3cziPDQs)
 
 # ProductAPI
 This is project is created to Demonstrate the CRUP operation on Product
@@ -14,79 +14,86 @@ The API’s are build for Product and Category CRUD operations. The restfull API
 - **update should update one particular record of the product.**
 - **delete should delete one particular record of the product.**
 
+# Data Modal
+![Data Modal](https://drive.google.com/uc?export=view&id=1cXyMBrBT7HMo8fvpvSO9OWoqgn1-Q4HN)
 
-
-Modules Description
+# Modules Description
 -	Models :- in this folder all the  database schema are created 
 -	Controller :- In this all the functionalities for routes will be handelled.
 -	Routes :- In this all the routes information are given 
 -	App.js:- All the database connection and to handle all the middleware. 
 -	Test :- this will test the basic API operations.
  
-Data Models
- 
 
-
-
-
-
-Usage
+# Usage
 - npm install
 - npm start
 - setup mongodb
 - Create db product
 - Create the test // install mocha,chai,chai-http
 
-API’s Description
+# API’s Description
 Product API’s Description
-Create product
-1.	http://localhost:3000/api/product/create
+## Create product
+>	http://localhost:3000/api/product/create
 
-Using this endpoint User can create the product. User need to provide this type of data.
- 
-In category user should pass the object id of Category
-Read Single product
-2.	http://localhost:3000/api/product/read/:id
-We can read the single product from the DB in the route we have to provide the id of the product which we want to read
+> Using this endpoint User can create the product. User need to provide this type of data.
 
-This is the type of data we will get after reading single product
- 
+> In category user should pass the object id of Category
 
+![Data Modal](https://drive.google.com/uc?export=view&id=1Y9UBnc7eYDAq0GAAxwHPzwVtysyXxTED)
+
+## Read Single product	
+> http://localhost:3000/api/product/read/:id
+
+>We can read the single product from the DB in the route we have to provide the id of the product which we want to read
+
+>This is the type of data we will get after reading single product
+
+![](https://drive.google.com/uc?export=view&id=1NjWPVWNnr-HILbLJ7wxGBhXJjgboKOz7)
      
-3.	Update Product
-http://localhost:3000/api/product/update/:id
-This API can be used to update the product 
+## Update Product
+> http://localhost:3000/api/product/update/:id
+
+> This API can be used to update the product 
+
+![](https://drive.google.com/uc?export=view&id=1-tqKJjomhQpo99HVDnEq08pIHGTZupk6)
  
-Here we can change any of the field to be updated.
+> Here we can change any of the field to be updated.
 
+## Read All The products
+> http://localhost:3000/api/product/read
 
+> With This route we can list all the products Sample 
 
-4.	Read All The products
-http://localhost:3000/api/product/read
-With This route we can list all the products
-Sample 
- 
-
-
-5.	Remove the product by Id
-
-It will delete the product by id given in url 
-http://localhost:3000/api/product/delete/:id
-
-Sample response:
-
+![](https://drive.google.com/uc?export=view&id=1-tqKJjomhQpo99HVDnEq08pIHGTZupk6)
  
 
-6.	Create Category:
-http://localhost:3000/api/category/create
-So category is referenced by the product to display the type to category the product belong 
-We should provide the category in json format like 
+
+## Remove the product by Id
+
+> It will delete the product by id given in url 
+
+> http://localhost:3000/api/product/delete/:id
+
+ 
+
+##	Create Category:
+> http://localhost:3000/api/category/create
+
+> So category is referenced by the product to display the type to category the product belong 
+
+> We should provide the category in json format like 
+
+
+```
 {
     "name" : "book"
 }
+```
 
 Response will be generated like:
-
+```
 {
     "name": "games",
     "_id": "617398dce07480115639168f",
@@ -94,11 +101,12 @@ Response will be generated like:
     "updatedAt": "2021-10-23T05:08:44.280Z",
     "__v": 0
 }
+```
 
 
 
 
-Testing
+# Testing
 So the  unit testing testing is done on all the 6 routes 
 1.	http://localhost:3000/api/product/create
 2.	http://localhost:3000/api/product/read/:id
@@ -120,6 +128,7 @@ DB Connected
 
   post product
     POST  PRODUCT
+```
 {
   name: 'toy',
   price: 100,
@@ -127,6 +136,7 @@ DB Connected
   category: '6172cd2e7dd84154752a27a9',
   discontinued: true
 }
+```
       ✔ it should post the products
 
   post product
@@ -139,6 +149,8 @@ DB Connected
 
   post category
     POST  CATEGORY
+```    
 { name: 'book' }
+```
       ✔ it should post the Category
 
