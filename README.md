@@ -115,42 +115,9 @@ So the  unit testing testing is done on all the 6 routes
 5.	http://localhost:3000/api/product/delete/:id
 6.	http://localhost:3000/api/category/create
 
-For testing use the command npm test
-The result will be shown like this
-All product
-    GET ALL PRODUCT
-DB Connected
-      ✔ it should get all the products (43ms)
+> For testing use the command npm test
+### The result will be shown like this
 
-  get single product
-    GET  PRODUCT BY ID
-      ✔ it should get  the product
-
-  post product
-    POST  PRODUCT
-```
-{
-  name: 'toy',
-  price: 100,
-  quantit: 10,
-  category: '6172cd2e7dd84154752a27a9',
-  discontinued: true
-}
-```
-      ✔ it should post the products
-
-  post product
-    POST  PRODUCT
-      ✔ it should update the products
-
-  remove single product
-    REMOVE  PRODUCT BY ID
-      ✔ it should remove  the product
-
-  post category
-    POST  CATEGORY
-```    
-{ name: 'book' }
-```
-      ✔ it should post the Category
+![](https://drive.google.com/uc?export=view&id=1AAOk0tbdpJ9CTJU7Jk0SPUkvDrGsKVK1)
+![](https://drive.google.com/uc?export=view&id=11muucCHmhiM9iqq5j7qTXL-HqwUxdgke)
 
